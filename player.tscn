@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://bin4fru3rkp8g"]
+
+[ext_resource type="Texture2D" uid="uid://cmm0tpeeo5yqm" path="res://animations/player/Knight/Knight_Att_1.png" id="1_1kqey"]
+[ext_resource type="Texture2D" uid="uid://csyesrf5rcfvv" path="res://animations/player/Knight/Knight_Att_2.png" id="2_1cqs2"]
+[ext_resource type="Texture2D" uid="uid://b801h4ykd0gaq" path="res://animations/player/Knight/Knight_Att_3.png" id="3_w7mxc"]
+[ext_resource type="Texture2D" uid="uid://cydnesank8rmu" path="res://animations/player/Knight/Knight_Roll.png" id="4_5bgwd"]
+[ext_resource type="Texture2D" uid="uid://covo45ysluned" path="res://animations/player/Knight/Knight_Run.png" id="5_cknl7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3oa0n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1kqey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1cqs2")
+}],
+"loop": true,
+"name": &"fastAttack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_w7mxc")
+}],
+"loop": true,
+"name": &"heavyAttack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_5bgwd")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_cknl7")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txihh"]
+size = Vector2(31, 41)
+
+[node name="Player" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_3oa0n")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_txihh")
