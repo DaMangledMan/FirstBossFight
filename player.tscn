@@ -12,6 +12,14 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("4_5bgwd")
+}],
+"loop": true,
+"name": &"dodge",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("1_1kqey")
 }, {
 "duration": 1.0,
@@ -35,15 +43,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_5bgwd")
-}],
-"loop": true,
-"name": &"roll",
-"speed": 5.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -75,12 +75,15 @@ size = Vector2(31, 43)
 
 [node name="Player" type="Area2D"]
 script = ExtResource("1_7fb13")
+_speed = null
+dodging = null
+attacking = null
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(7, 7)
 sprite_frames = SubResource("SpriteFrames_3oa0n")
-animation = &"idle"
+animation = &"dodge"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6.5)

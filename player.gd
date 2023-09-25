@@ -17,8 +17,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var velocity = Vector2.ZERO
+	
 	if !dodging and !attacking:
+		
+		var velocity = Vector2.ZERO
+		
 		if Input.is_action_pressed("move_up"):
 			velocity.y -= 1
 		if Input.is_action_pressed("move_right"):
@@ -29,7 +32,7 @@ func _process(delta):
 			velocity.x -= 1
 		if Input.is_action_pressed("move_dodge"):
 			dodging = true
-			$AnimatedSprite2D.animation = "roll"
+			$AnimatedSprite2D.animation = "dodge"
 			$RollTimer.start()
 		elif Input.is_action_pressed("move_quickAttack"):
 			attacking = true
