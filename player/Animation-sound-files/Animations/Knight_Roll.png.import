@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0l067v6d52db"
-path="res://.godot/imported/Knight_Jump.png-277f077b79ee8c35224cc624326bd4b9.ctex"
+uid="uid://cydnesank8rmu"
+path="res://.godot/imported/Knight_Roll.png-846b52321b05dca38160ef93a9167a4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animations/player/Knight/Knight_Jump.png"
-dest_files=["res://.godot/imported/Knight_Jump.png-277f077b79ee8c35224cc624326bd4b9.ctex"]
+source_file="res://player/Animation-sound-files/Animations/Knight_Roll.png"
+dest_files=["res://.godot/imported/Knight_Roll.png-846b52321b05dca38160ef93a9167a4b.ctex"]
 
 [params]
 

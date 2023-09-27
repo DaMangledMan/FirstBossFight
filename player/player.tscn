@@ -1,0 +1,114 @@
+[gd_scene load_steps=5 format=3 uid="uid://bin4fru3rkp8g"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_pnp2k"]
+[ext_resource type="Texture2D" uid="uid://c3c63ri7lbf83" path="res://player/Animation-sound-files/Animations/Knight_Idle.png" id="2_oni5c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rorfu"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"dodge_down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"dodge_right",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"dodge_up",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"heal_down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"heal_right",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"heal_up",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"heavy_attack_down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"heavy_attack_right",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"heavy_attack_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oni5c")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"light_attack_down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"light_attack_right",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"light_attack_up",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oa7kn"]
+size = Vector2(34, 49)
+
+[node name="player" type="Area2D"]
+script = ExtResource("1_pnp2k")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_rorfu")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7.5)
+shape = SubResource("RectangleShape2D_oa7kn")
+
+[node name="DodgeTimer" type="Timer" parent="."]
+
+[node name="HealTimer" type="Timer" parent="."]
+
+[node name="LightAttackTimer" type="Timer" parent="."]
+
+[node name="HeavyAttackTimer" type="Timer" parent="."]

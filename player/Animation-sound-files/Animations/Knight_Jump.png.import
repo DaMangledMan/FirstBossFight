@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw4rugc16orli"
-path="res://.godot/imported/Knight_Death.png-24c7846b3bc8300bf13d8c36d98e1143.ctex"
+uid="uid://0l067v6d52db"
+path="res://.godot/imported/Knight_Jump.png-3cd7c9392ac863d16f6d8aeda0eac3bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animations/player/Knight/Knight_Death.png"
-dest_files=["res://.godot/imported/Knight_Death.png-24c7846b3bc8300bf13d8c36d98e1143.ctex"]
+source_file="res://player/Animation-sound-files/Animations/Knight_Jump.png"
+dest_files=["res://.godot/imported/Knight_Jump.png-3cd7c9392ac863d16f6d8aeda0eac3bd.ctex"]
 
 [params]
 

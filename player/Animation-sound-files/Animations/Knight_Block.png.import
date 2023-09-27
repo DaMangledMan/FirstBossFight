@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://covo45ysluned"
-path="res://.godot/imported/Knight_Run.png-22be117e9895311098ae59c7ce24edb6.ctex"
+uid="uid://d1bw3je84f6by"
+path="res://.godot/imported/Knight_Block.png-d4b286ce90d951415246f4948d9896a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animations/player/Knight/Knight_Run.png"
-dest_files=["res://.godot/imported/Knight_Run.png-22be117e9895311098ae59c7ce24edb6.ctex"]
+source_file="res://player/Animation-sound-files/Animations/Knight_Block.png"
+dest_files=["res://.godot/imported/Knight_Block.png-d4b286ce90d951415246f4948d9896a1.ctex"]
 
 [params]
 

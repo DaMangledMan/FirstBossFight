@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cydnesank8rmu"
-path="res://.godot/imported/Knight_Roll.png-81a6c519a49cacf6cf6af9bf9d5eef1c.ctex"
+uid="uid://b801h4ykd0gaq"
+path="res://.godot/imported/Knight_Att_3.png-ead46b4e834e4015090235b03f0d3c22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animations/player/Knight/Knight_Roll.png"
-dest_files=["res://.godot/imported/Knight_Roll.png-81a6c519a49cacf6cf6af9bf9d5eef1c.ctex"]
+source_file="res://player/Animation-sound-files/Animations/Knight_Att_3.png"
+dest_files=["res://.godot/imported/Knight_Att_3.png-ead46b4e834e4015090235b03f0d3c22.ctex"]
 
 [params]
 

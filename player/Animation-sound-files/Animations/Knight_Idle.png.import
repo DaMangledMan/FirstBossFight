@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4casy2sb2xec"
-path="res://.godot/imported/Jump_Smoke.png-1dc5080d24809be3a6d8fae70757bf79.ctex"
+uid="uid://c3c63ri7lbf83"
+path="res://.godot/imported/Knight_Idle.png-f17851e9e613e2f2b37f14837d8e129e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animations/player/Knight/Jump_Smoke.png"
-dest_files=["res://.godot/imported/Jump_Smoke.png-1dc5080d24809be3a6d8fae70757bf79.ctex"]
+source_file="res://player/Animation-sound-files/Animations/Knight_Idle.png"
+dest_files=["res://.godot/imported/Knight_Idle.png-f17851e9e613e2f2b37f14837d8e129e.ctex"]
 
 [params]
 
