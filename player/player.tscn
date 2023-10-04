@@ -1,89 +1,149 @@
-[gd_scene load_steps=5 format=3 uid="uid://bin4fru3rkp8g"]
+[gd_scene load_steps=20 format=3 uid="uid://bin4fru3rkp8g"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_pnp2k"]
-[ext_resource type="Texture2D" uid="uid://c3c63ri7lbf83" path="res://player/Animation-sound-files/Animations/Knight_Idle.png" id="2_oni5c"]
+[ext_resource type="Texture2D" uid="uid://ceuekcp0r0aup" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 113940.png" id="2_v7lot"]
+[ext_resource type="Texture2D" uid="uid://djm6gjhcvo5xq" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 113952.png" id="3_8t3js"]
+[ext_resource type="Texture2D" uid="uid://b1onbskpte6ve" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 113957.png" id="4_b7vat"]
+[ext_resource type="Texture2D" uid="uid://udbgqeuktdq2" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 114002.png" id="5_exoob"]
+[ext_resource type="Texture2D" uid="uid://dna10t4aftwmn" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 114007.png" id="6_ts0qd"]
+[ext_resource type="Texture2D" uid="uid://b2eibkgls22ci" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 114015.png" id="7_0culk"]
+[ext_resource type="Texture2D" uid="uid://c16bu6gs1uqng" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 114023.png" id="8_8gde0"]
+[ext_resource type="Texture2D" uid="uid://bo7ni0exo047t" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 114035.png" id="9_tsjb3"]
+[ext_resource type="Texture2D" uid="uid://vviq3ko3tend" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 114044.png" id="10_t16yg"]
+[ext_resource type="Texture2D" uid="uid://b8uo0kpkmlueq" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 114527.png" id="11_ugeas"]
+[ext_resource type="Texture2D" uid="uid://rm7qwpwmy16d" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 114057.png" id="12_pg2l4"]
+[ext_resource type="Texture2D" uid="uid://b2hy7uwd8cpo5" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 114104.png" id="13_3rw7m"]
+[ext_resource type="Texture2D" uid="uid://clmi3bgxwyjsf" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 114110.png" id="14_ap0ef"]
+[ext_resource type="Texture2D" uid="uid://b0cxb5xftvkxh" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 114117.png" id="15_4r30r"]
+[ext_resource type="Texture2D" uid="uid://dyjj5v53nskmm" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 114122.png" id="16_gxmqj"]
+[ext_resource type="Texture2D" uid="uid://mq5ijf5p4o58" path="res://player/Animation-sound-files/Animations/Screenshot 2023-09-29 114132.png" id="17_k6msx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rorfu"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_v7lot")
+}],
 "loop": true,
 "name": &"dodge_down",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8t3js")
+}],
 "loop": true,
 "name": &"dodge_right",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_b7vat")
+}],
 "loop": true,
 "name": &"dodge_up",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_exoob")
+}],
 "loop": true,
 "name": &"heal_down",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ts0qd")
+}],
 "loop": true,
 "name": &"heal_right",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_0culk")
+}],
 "loop": true,
 "name": &"heal_up",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_8gde0")
+}],
 "loop": true,
 "name": &"heavy_attack_down",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_tsjb3")
+}],
 "loop": true,
 "name": &"heavy_attack_right",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_t16yg")
+}],
 "loop": true,
 "name": &"heavy_attack_up",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_oni5c")
+"texture": ExtResource("11_ugeas")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_pg2l4")
+}],
 "loop": true,
 "name": &"light_attack_down",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_3rw7m")
+}],
 "loop": true,
 "name": &"light_attack_right",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ap0ef")
+}],
 "loop": true,
 "name": &"light_attack_up",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_4r30r")
+}],
 "loop": true,
 "name": &"walk_down",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_gxmqj")
+}],
 "loop": true,
 "name": &"walk_right",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_k6msx")
+}],
 "loop": true,
 "name": &"walk_up",
 "speed": 5.0
@@ -97,7 +157,7 @@ script = ExtResource("1_pnp2k")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(8, 8)
+scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_rorfu")
 animation = &"idle"
 
@@ -112,3 +172,8 @@ shape = SubResource("RectangleShape2D_oa7kn")
 [node name="LightAttackTimer" type="Timer" parent="."]
 
 [node name="HeavyAttackTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="DodgeTimer" to="." method="_on_dodge_timer_timeout"]
+[connection signal="timeout" from="HealTimer" to="." method="_on_heal_timer_timeout"]
+[connection signal="timeout" from="LightAttackTimer" to="." method="_on_light_attack_timer_timeout"]
+[connection signal="timeout" from="HeavyAttackTimer" to="." method="_on_heavy_attack_timer_timeout"]
