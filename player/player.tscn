@@ -173,6 +173,8 @@ shape = SubResource("RectangleShape2D_oa7kn")
 
 [node name="HeavyAttackTimer" type="Timer" parent="."]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [connection signal="timeout" from="DodgeTimer" to="." method="_on_dodge_timer_timeout"]
 [connection signal="timeout" from="HealTimer" to="." method="_on_heal_timer_timeout"]
 [connection signal="timeout" from="LightAttackTimer" to="." method="_on_light_attack_timer_timeout"]
