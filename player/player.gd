@@ -1,5 +1,9 @@
 extends Area2D
 
+signal dead
+
+@export var health = 0
+
 @export var _speed = 200
 @export var dodging = false
 @export var healing = false
@@ -9,6 +13,7 @@ extends Area2D
 var screen_size
 var velocity
 
+var max = Vector2.ZERO
 
 
 
@@ -17,13 +22,17 @@ func _ready():
 	screen_size = get_viewport_rect().size
 	$AnimatedSprite2D.animation = "idle"
 	$AnimatedSprite2D.play()
-	velocity = Vector2.ZERO
-
+	print(screen_size)
+	max.x += 2000
+	max.y += 2000
 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	if health == 0:
+		dead.emit()
 	
 	# determines the action of the player when inside an uninterruptable action
 	if !dodging and !attacking and !healing:
@@ -239,11 +248,21 @@ func _process(delta):
 	# controls the movement on a perframe basis
 	position += velocity * delta
 	# prevents player from leaving the screen
-	position = position.clamp(Vector2.ZERO, screen_size)
+	position = position.clamp(Vector2.ZERO, max)
 
 
+func start(pos):
+	position = pos
+	health = 1000
 
+func edit_health(new_health):
+	health = new_health
 
+func player_living():
+	if health != 0:
+		return true
+	else:
+		return false
 
 
 func _on_dodge_timer_timeout():
