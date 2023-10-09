@@ -38,4 +38,6 @@ position = Vector2(1000, 800)
 
 [connection signal="dead" from="Player" to="." method="game_over"]
 [connection signal="dead" from="Boss" to="." method="game_over"]
+[connection signal="hide_entities" from="GameOverHUD" to="." method="hide_all_entities"]
+[connection signal="quit_game" from="GameOverHUD" to="." method="quit_game"]
 [connection signal="start_game" from="GameOverHUD" to="." method="new_game"]

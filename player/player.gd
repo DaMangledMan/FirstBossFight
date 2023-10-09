@@ -3,26 +3,22 @@ extends Area2D
 signal dead
 
 @export var health = 0
-
 @export var _speed = 200
+@export var is_alive = false
 @export var dodging = false
 @export var healing = false
 @export var attacking = false
 @export var attack_type = "light"
 @export var last_direction = "right"
-var screen_size
 var velocity
-
 var max = Vector2.ZERO
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	screen_size = get_viewport_rect().size
 	$AnimatedSprite2D.animation = "idle"
 	$AnimatedSprite2D.play()
-	print(screen_size)
 	max.x += 2000
 	max.y += 2000
 
@@ -33,9 +29,11 @@ func _process(delta):
 	
 	if health == 0:
 		dead.emit()
+		velocity = Vector2.ZERO
+		is_alive = false
 	
 	# determines the action of the player when inside an uninterruptable action
-	if !dodging and !attacking and !healing:
+	if !dodging and !attacking and !healing and is_alive:
 		
 		velocity = Vector2.ZERO
 		
@@ -254,6 +252,7 @@ func _process(delta):
 func start(pos):
 	position = pos
 	health = 1000
+	is_alive = true
 
 func edit_health(new_health):
 	health = new_health
@@ -263,6 +262,9 @@ func player_living():
 		return true
 	else:
 		return false
+
+func get_player_position():
+	return position
 
 
 func _on_dodge_timer_timeout():

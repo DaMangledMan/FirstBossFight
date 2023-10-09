@@ -2,6 +2,7 @@ extends CanvasLayer
 
 signal start_game
 signal quit_game
+signal hide_entities
 
 
 # Called when the node enters the scene tree for the first time.
@@ -25,6 +26,7 @@ func boss_death_game_over_message():
 
 
 func show_menu():
+	hide_entities.emit()
 	$StartButton.show()
 	$QuitButton.show()
 	$GameNameLabel.show()

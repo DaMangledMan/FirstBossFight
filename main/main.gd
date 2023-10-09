@@ -15,6 +15,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	$Boss.get_player_position($Player.get_player_position())
 	
 	if Input.is_action_pressed("boss_second_phase"):
 		$Boss.edit_health(1000)
@@ -32,7 +33,6 @@ func game_over():
 	else:
 		$GameOverHUD.player_death_game_over_message()
 
-
 func new_game():
 	time = 0
 	$Player.show()
@@ -40,3 +40,9 @@ func new_game():
 	$Player.start($PlayerStartPosition.position)
 	$Boss.start($BossStartPosition.position)
 
+func quit_game():
+	get_tree().quit()
+
+func hide_all_entities():
+	$Player.hide()
+	$Boss.hide()
