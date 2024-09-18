@@ -2,7 +2,7 @@ extends Area2D
 
 signal dead
 
-@export var health = 0
+@export var health = 300
 @export var _speed = 100
 @export var is_alive = false
 @export var acting = false
